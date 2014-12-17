@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["tauqeer.ahmad2008@gmail.com"]
   spec.summary       = %q{Creates a field inside a model that allows you to store arbitrary n number of attributes against a specified field.}
   spec.description   = %q{Creates a field inside a model that allows you to store arbitrary n number of attributes against a specified field.}
-  spec.homepage      = "https://github.com/tauqeerahamd/virtual_attributes"
+  spec.homepage      = "https://github.com/tauqeerahamd/virtual_fields"
   spec.license       = "MIT"
 
   spec.files         = ['Gemfile',
