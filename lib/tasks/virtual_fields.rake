@@ -1,5 +1,5 @@
 desc 'virtual attributes content rake task'
-task :add_virtual_attributes => :environment  do
+task :add_virtual_fields => :environment  do
   puts "Generating migration"
   model_name = ENV['model'].to_s.downcase
   if model_name.blank?
