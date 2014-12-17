@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'virtual_attributes/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "virtual_attributes"
+  spec.name          = "v_attributes"
   spec.version       = VirtualAttributes::VERSION
   spec.authors       = ["Tauqeer"]
   spec.email         = ["tauqeer.ahmad2008@gmail.com"]
