@@ -1,9 +1,9 @@
-require "virtual_attributes/version"
+require "virtual_fields/version"
 include ActiveModel::MassAssignmentSecurity
 
-module VirtualAttributes
+module VirtualFields
   # Your code goes here...
-  require 'virtual_attributes/railtie' if defined?(Rails)
+  require 'virtual_fields/railtie' if defined?(Rails)
   class << self
     def valid_table?(model_name)
       model_name.to_s.camelize.constantize
