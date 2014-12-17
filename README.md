@@ -24,27 +24,28 @@ Or install it yourself as:
 
 In your model add following code
 
-  include VirtualFields
-  virtual_keys :field1, field2, .......
-
-
-  class User < ActiveRecord::Base
-    attr_accessible :email, :name
-
     include VirtualFields
-    virtual_keys :address, :job_title, date_of_birth
-  end
 
-  user = User.create
-  user.address
-  => nil
+    virtual_keys :field1, field2, .......
 
-  user.address = "xyz block"
-  user.save
 
-  user.reload
-  user.address
-  => "xyz block"
+    class User < ActiveRecord::Base
+      attr_accessible :email, :name
+
+      include VirtualFields
+      virtual_keys :address, :job_title, date_of_birth
+    end
+
+    user = User.create
+    user.address
+    => nil
+
+    user.address = "xyz block"
+    user.save
+
+    user.reload
+    user.address
+    => "xyz block"
 
 That it! Enjoy
 
