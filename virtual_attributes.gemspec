@@ -14,6 +14,8 @@ Gem::Specification.new do |spec|
   spec.license       = "MIT"
 
   spec.files         = ['Gemfile',
+                        'lib/virtual_attributes/railtie.rb',
+                        'lib/tasks/virtual_attributes.rake',
                         'lib/virtual_attributes/version.rb',
                         'lib/virtual_attributes.rb']
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }

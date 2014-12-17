@@ -3,6 +3,17 @@ include ActiveModel::MassAssignmentSecurity
 
 module VirtualAttributes
   # Your code goes here...
+  require 'virtual_attributes/railtie' if defined?(Rails)
+  class << self
+    def valid_table?(model_name)
+      model_name.to_s.camelize.constantize
+    end
+
+    def valid_column?(model_name)
+      klass = model_name.to_s.camelize.constantize
+      klass.attribute_names.include?('content')
+    end
+  end
 
   def self.included(base)
     base.extend(ClassMethods)
