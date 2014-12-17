@@ -6,19 +6,47 @@ TODO: Write a gem description
 
 Add this line to your application's Gemfile:
 
-    gem 'virtual_attributes'
+    gem 'virtual_fields'
 
 And then execute:
 
     $ bundle
 
+    $ rake add_virtual_fields model=Model
+
+    example: $ rake add_virtual_fields model=User
+
 Or install it yourself as:
 
-    $ gem install virtual_attributes
+    $ gem install virtual_fields
 
 ## Usage
 
-TODO: Write usage instructions here
+In your model add following code
+
+  include VirtualFields
+  virtual_keys :field1, field2, .......
+
+
+  class User < ActiveRecord::Base
+    attr_accessible :email, :name
+
+    include VirtualFields
+    virtual_keys :address, :job_title, date_of_birth
+  end
+
+  user = User.create
+  user.address
+  => nil
+
+  user.address = "xyz block"
+  user.save
+
+  user.reload
+  user.address
+  => "xyz block"
+
+That it! Enjoy
 
 ## Contributing
 
